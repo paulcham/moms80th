@@ -34,7 +34,7 @@ header {
 
 h1 {
     font-family: 'Luckiest Guy', cursive;
-    font-size: 3.5rem;
+    font-size: 4rem;
     line-height: 1.2;
     margin-bottom: 1.5rem;
 }
@@ -88,59 +88,53 @@ h1 {
     text-align: center;
 }
 
-.date-time {
-    background-color: var(--coral);
-    color: white;
-    padding: 1rem;
-    border-radius: 25px;
-    margin-bottom: 1.5rem;
-    display: inline-block;
-}
-
-.date {
-    font-family: 'Luckiest Guy', cursive;
-    font-size: 2.2rem;
-}
-
-.time {
-    font-size: 1.8rem;
-}
-
-.location {
-    text-align: center;
-    margin-bottom: 1rem;
-    font-size: 1.3rem;
-    color: var(--blue);
-}
-
-.address {
-    background-color: var(--blue);
-    color: white;
-    padding: 1.5rem 2rem;
-    border-radius: 25px;
-    margin: 2rem auto;
-    max-width: 400px;
-    text-align: center;
-    font-size: 1.2rem;
-}
-
-.additional-info {
-    background-color: var(--orange);
+.info-box {
     color: white;
     padding: 1.5rem 2rem;
     border-radius: 25px;
     margin: 2rem auto;
     max-width: 500px;
+    text-align: center;
     font-size: 1.2rem;
 }
 
-.additional-info ul {
+.box-title {
+    font-family: 'Luckiest Guy', cursive;
+    font-size: 2.4rem;
+    letter-spacing: 0.05em;
+}
+
+.box-content {
+    line-height: 1.4;
+    font-size: 1.5rem;
+}
+
+.box-content p {
+    margin: 1rem 0;
+}
+
+/* Specific box styles */
+.date-box {
+    background-color: var(--coral);
+    max-width: 500px;
+}
+
+.location-box {
+    background-color: var(--blue);
+    max-width: 500px;
+}
+
+.food-box {
+    background-color: var(--orange);
+}
+
+.food-box ul {
     list-style: none;
     padding-left: 0;
     margin: 1rem 0;
 }
 
-.additional-info li {
+.food-box li {
     margin: 1rem 0;
     position: relative;
     display: flex;
@@ -149,8 +143,8 @@ h1 {
     gap: 0.8rem;
 }
 
-.additional-info li::before,
-.additional-info li::after {
+.food-box li::before,
+.food-box li::after {
     content: '★';
     font-size: 0.8em;
     color: white;
@@ -159,45 +153,13 @@ h1 {
     transform: none;
 }
 
-.contact-info {
+.contact-box {
     background-color: var(--light-coral);
-    color: white;
-    padding: 1.5rem 2rem;
-    border-radius: 25px;
-    margin: 2rem auto;
-    max-width: 400px;
-    text-align: center;
-    font-size: 1.2rem;
-}
-
-.address h2,
-.additional-info h2,
-.contact-info h2 {
-    font-family: 'Luckiest Guy', cursive;
-    margin-bottom: 1.2rem;
-    font-size: 2.2rem;
-    letter-spacing: 0.05em;
-}
-
-.additional-info p {
-    margin: 1rem 0;
-}
-
-.rsvp-section {
-    background-color: var(--blue);
-    color: white;
-    padding: 1.5rem 2rem;
-    border-radius: 25px;
-    margin: 2rem auto;
     max-width: 500px;
-    text-align: center;
 }
 
-.rsvp-section h2 {
-    font-family: 'Luckiest Guy', cursive;
-    margin-bottom: 1.2rem;
-    font-size: 2.2rem;
-    letter-spacing: 0.05em;
+.rsvp-box {
+    background-color: var(--blue);
 }
 
 .rsvp-form {
@@ -217,7 +179,7 @@ h1 {
 .form-group label {
     display: block;
     margin-bottom: 0.5rem;
-    font-size: 1.1rem;
+    font-size: 1.5rem;
 }
 
 .form-group input {
@@ -227,7 +189,7 @@ h1 {
     border-radius: 12px;
     background: rgba(255, 255, 255, 0.9);
     font-family: 'Special Elite', cursive;
-    font-size: 1.1rem;
+    font-size: 1.5rem;
 }
 
 .form-group input:focus {
@@ -243,7 +205,7 @@ h1 {
     padding: 1rem 2rem;
     border-radius: 12px;
     font-family: 'Luckiest Guy', cursive;
-    font-size: 1.2rem;
+    font-size: 1.5rem;
     cursor: pointer;
     transition: transform 0.2s, background-color 0.2s;
     margin-top: 1rem;
@@ -256,12 +218,12 @@ h1 {
 
 .rsvp-message {
     margin-top: 1rem;
-    font-size: 1.1rem;
+    font-size: 1.5rem;
     min-height: 1.5em;
 }
 
 @media (max-width: 600px) {
-    .rsvp-section {
+    .rsvp-box {
         margin: 1.5rem 1rem;
         padding: 1.2rem;
     }
@@ -361,7 +323,7 @@ h1 {
     width: 90px;
     height: 90px;
     top: 15%;
-    right: 25%;
+    right: 18%;
     background-color: var(--orange);
     transform: rotate(-5deg);
 }
@@ -438,16 +400,25 @@ h1 {
 }
 
 .flower {
-    position: relative;
+    position: absolute;
 }
 
-.flower::before {
+.flower::before,
+.flower::after,
+.flower .petal {
     content: '';
     position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
     background-color: var(--light-coral);
+    border-radius: 50% 50% 0 50%;
+    transform-origin: 100% 100%;
+}
+
+.flower .center {
+    content: '';
+    position: absolute;
+    background-color: var(--orange);
     border-radius: 50%;
+    z-index: 1;
 }
 
 .flower-1 {
@@ -455,14 +426,34 @@ h1 {
     height: 60px;
     top: 45%;
     right: 12%;
-    background-color: var(--light-coral);
-    border-radius: 50%;
+}
+
+.flower-1::before,
+.flower-1::after,
+.flower-1 .petal {
+    width: 30px;
+    height: 30px;
+    opacity: 0.9;
+}
+
+.flower-1 .center {
+    width: 15px;
+    height: 15px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 .flower-1::before {
-    top: -30px;
-    width: 30px;
-    height: 30px;
+    transform: rotate(45deg);
+}
+
+.flower-1::after {
+    transform: rotate(135deg);
+}
+
+.flower-1 .petal {
+    transform: rotate(-45deg);
 }
 
 .flower-2 {
@@ -470,29 +461,91 @@ h1 {
     height: 90px;
     bottom: 30%;
     left: 15%;
-    background-color: var(--light-coral);
-    border-radius: 50%;
+}
+
+.flower-2::before,
+.flower-2::after,
+.flower-2 .petal {
+    width: 45px;
+    height: 45px;
+    opacity: 0.9;
+}
+
+.flower-2 .center {
+    width: 22px;
+    height: 22px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 .flower-2::before {
-    top: -45px;
-    width: 45px;
-    height: 45px;
+    transform: rotate(0deg);
+}
+
+.flower-2::after {
+    transform: rotate(120deg);
+}
+
+.flower-2 .petal {
+    transform: rotate(240deg);
 }
 
 .flower-3 {
     width: 120px;
     height: 120px;
-    top: 20%;
-    right: 20%;
-    background-color: var(--light-coral);
-    border-radius: 50%;
+    top: 8%;
+    right: 8%;
+}
+
+.flower-3::before,
+.flower-3::after,
+.flower-3 .petal {
+    width: 60px;
+    height: 60px;
+    opacity: 0.9;
+}
+
+.flower-3 .center {
+    width: 30px;
+    height: 30px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 .flower-3::before {
-    top: -60px;
-    width: 60px;
-    height: 60px;
+    transform: rotate(30deg);
+}
+
+.flower-3::after {
+    transform: rotate(150deg);
+}
+
+.flower-3 .petal {
+    transform: rotate(270deg);
+}
+
+.circle {
+    position: absolute;
+    border-radius: 50%;
+    background-color: var(--light-coral);
+    opacity: 0.15;
+    z-index: 0;
+}
+
+.circle-1 {
+    width: 300px;
+    height: 300px;
+    top: -100px;
+    left: -100px;
+}
+
+.circle-2 {
+    width: 250px;
+    height: 250px;
+    bottom: -50px;
+    right: -50px;
 }
 
 @media (max-width: 600px) {

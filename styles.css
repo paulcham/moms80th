@@ -6,6 +6,10 @@
     --bg-color: #FFF5F5;
 }
 
+strong {
+    color: var(--orange);
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -24,7 +28,7 @@ body {
     margin: 0 auto;
     padding: 2rem;
     position: relative;
-    overflow: hidden;
+    overflow: visible;
 }
 
 header {
@@ -33,9 +37,10 @@ header {
 }
 
 h1 {
-    font-family: 'Luckiest Guy', cursive;
-    font-size: 4rem;
-    line-height: 1.2;
+    font-family: 'Caprasimo', cursive;
+    font-weight: normal;
+    font-size: 5rem;
+    line-height: 1.15;
     margin-bottom: 1.5rem;
 }
 
@@ -47,7 +52,6 @@ h1 {
 .title-80 {
     color: var(--blue);
     display: block;
-    font-size: 4.5rem;
 }
 
 .title-birthday {
@@ -61,25 +65,23 @@ h1 {
 }
 
 .circular-image {
-    width: 250px;
-    height: 250px;
+    width: 300px;
+    height: 300px;
     border-radius: 50%;
     object-fit: cover;
     border: 8px solid var(--light-coral);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .main-content {
     background-color: white;
-    padding: 2rem;
+    padding: 3rem;
     border-radius: 20px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     position: relative;
-    z-index: 1;
+    z-index: 0;
 }
 
 .invitation-text {
-    font-size: 1.2rem;
+    font-size: 1.4rem;
     margin-bottom: 2rem;
     text-align: center;
 }
@@ -99,9 +101,10 @@ h1 {
 }
 
 .box-title {
-    font-family: 'Luckiest Guy', cursive;
-    font-size: 2.4rem;
-    letter-spacing: 0.05em;
+    font-family: 'Caprasimo', cursive;
+    font-weight: normal;
+    font-size: 2.2rem;
+    letter-spacing: 0.02em;
 }
 
 .box-content {
@@ -110,7 +113,7 @@ h1 {
 }
 
 .box-content p {
-    margin: 1rem 0;
+    margin: 0.5rem 0;
 }
 
 /* Specific box styles */
@@ -124,6 +127,30 @@ h1 {
     max-width: 500px;
 }
 
+.directions-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: white;
+    text-decoration: none;
+    background-color: var(--orange);
+    padding: 0.8rem 1.2rem 0.6rem;
+    border-radius: 25px;
+    margin-top: 1rem;
+    font-family: 'Special Elite', cursive;
+    font-size: 1.1rem;
+    line-height: 1;
+}
+
+.directions-link:hover {
+    background-color: var(--coral);
+}
+
+.directions-link .material-icons {
+    font-size: 1.3em;
+    margin-top: -2px;
+}
+
 .food-box {
     background-color: var(--orange);
 }
@@ -131,11 +158,11 @@ h1 {
 .food-box ul {
     list-style: none;
     padding-left: 0;
-    margin: 1rem 0;
+    margin: 0.5rem 0 2rem;
 }
 
 .food-box li {
-    margin: 1rem 0;
+    margin: 0.25rem 0;
     position: relative;
     display: flex;
     align-items: center;
@@ -172,7 +199,7 @@ h1 {
 
 .form-group {
     width: 100%;
-    max-width: 300px;
+    max-width: 90%;
     text-align: left;
 }
 
@@ -195,7 +222,6 @@ h1 {
 .form-group input:focus {
     outline: none;
     background: white;
-    box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.3);
 }
 
 .rsvp-button {
@@ -204,16 +230,15 @@ h1 {
     border: none;
     padding: 1rem 2rem;
     border-radius: 12px;
-    font-family: 'Luckiest Guy', cursive;
-    font-size: 1.5rem;
+    font-family: 'Caprasimo', cursive;
+    font-weight: normal;
+    font-size: 1.4rem;
     cursor: pointer;
-    transition: transform 0.2s, background-color 0.2s;
     margin-top: 1rem;
 }
 
 .rsvp-button:hover {
     background-color: var(--coral);
-    transform: scale(1.05);
 }
 
 .rsvp-message {
@@ -228,19 +253,30 @@ h1 {
     }
 
     h1 {
-        font-size: 3.2rem;
+        font-size: 2.8rem;
     }
 
     .title-80 {
-        font-size: 3.6rem;
+        font-size: 3.2rem;
     }
 
     .box-title {
-        font-size: 1.92rem;
+        font-size: 1.8rem;
+        letter-spacing: 0.01em;
     }
 
     .box-content {
         font-size: 1.2rem;
+    }
+
+    .directions-link {
+        padding: 0.4rem 0.8rem;
+        font-size: 1rem;
+        margin-top: 0.8rem;
+    }
+
+    .directions-link .material-icons {
+        font-size: 1.1em;
     }
 
     .invitation-text {
@@ -263,7 +299,8 @@ h1 {
 
     .rsvp-button {
         padding: 0.8rem 1.6rem;
-        font-size: 1.2rem;
+        font-size: 1.3rem;
+        letter-spacing: 0.01em;
     }
 
     .rsvp-message {
@@ -277,26 +314,10 @@ h1 {
     }
 }
 
-.website-link {
-    background-color: var(--coral);
-    color: white;
-    padding: 1.5rem 2rem;
-    border-radius: 25px;
-    display: inline-block;
-    margin: 1.5rem auto;
-    text-align: center;
-    font-size: 1.2rem;
-}
-
-.website-link a {
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
-}
-
 .decorative-elements div {
     position: absolute;
-    z-index: 0;
+    z-index: 2;
+    opacity: 0.9;
 }
 
 .star {
@@ -307,16 +328,16 @@ h1 {
 .star-1 {
     width: 45px;
     height: 45px;
-    top: 5%;
-    right: 15%;
+    top: -2%;
+    right: -3%;
     background-color: var(--blue);
 }
 
 .star-2 {
     width: 65px;
     height: 65px;
-    top: 20%;
-    left: 5%;
+    top: 15%;
+    left: -4%;
     background-color: var(--orange);
     transform: rotate(45deg);
 }
@@ -324,8 +345,8 @@ h1 {
 .star-3 {
     width: 85px;
     height: 85px;
-    bottom: 15%;
-    right: 15%;
+    bottom: 10%;
+    right: -5%;
     background-color: var(--light-coral);
     transform: rotate(-15deg);
 }
@@ -333,8 +354,8 @@ h1 {
 .star-4 {
     width: 35px;
     height: 35px;
-    top: 40%;
-    right: 8%;
+    top: 45%;
+    right: -2%;
     background-color: var(--orange);
     transform: rotate(20deg);
 }
@@ -342,8 +363,8 @@ h1 {
 .star-5 {
     width: 75px;
     height: 75px;
-    top: 60%;
-    left: 12%;
+    top: 57%;
+    left: -6%;
     background-color: var(--blue);
     transform: rotate(-30deg);
 }
@@ -351,8 +372,8 @@ h1 {
 .star-6 {
     width: 55px;
     height: 55px;
-    bottom: 25%;
-    left: 20%;
+    bottom: 30%;
+    left: -3%;
     background-color: var(--light-coral);
     transform: rotate(60deg);
 }
@@ -360,8 +381,8 @@ h1 {
 .star-7 {
     width: 90px;
     height: 90px;
-    top: 15%;
-    right: 18%;
+    top: 25%;
+    right: -8%;
     background-color: var(--orange);
     transform: rotate(-5deg);
 }
@@ -369,8 +390,8 @@ h1 {
 .star-8 {
     width: 40px;
     height: 40px;
-    bottom: 40%;
-    right: 10%;
+    bottom: 45%;
+    right: -4%;
     background-color: var(--blue);
     transform: rotate(75deg);
 }
@@ -378,8 +399,8 @@ h1 {
 .star-9 {
     width: 70px;
     height: 70px;
-    bottom: 10%;
-    left: 8%;
+    bottom: 5%;
+    left: -5%;
     background-color: var(--light-coral);
     transform: rotate(25deg);
 }
@@ -406,10 +427,10 @@ h1 {
 }
 
 .arrow-3 {
-    width: 100px;
-    height: 100px;
-    top: 50%;
-    right: 15%;
+    width: 80px;
+    height: 80px;
+    top: 40%;
+    right: 0;
     transform: rotate(135deg);
 }
 
@@ -462,8 +483,8 @@ h1 {
 .flower-1 {
     width: 60px;
     height: 60px;
-    top: 45%;
-    right: 12%;
+    top: 59%;
+    right: 7%;
 }
 
 .flower-1::before,
@@ -497,8 +518,8 @@ h1 {
 .flower-2 {
     width: 90px;
     height: 90px;
-    bottom: 30%;
-    left: 15%;
+    bottom: 50%;
+    left: 5%;
 }
 
 .flower-2::before,
@@ -588,7 +609,7 @@ h1 {
 
 @media (max-width: 600px) {
     .container {
-        padding: 1rem;
+        padding: 1.5rem;
     }
 
     h1 {
@@ -600,7 +621,7 @@ h1 {
     }
 
     .main-content {
-        padding: 1.5rem;
+        padding: 2rem;
     }
 
     .invitation-text {
@@ -615,7 +636,13 @@ h1 {
         font-size: 1.3rem;
     }
 
-    .decorative-elements div {
-        transform: scale(0.6);
-    }
+    .star-1 { width: 27px; height: 27px; top: -1%; right: -2%; }
+    .star-2 { width: 39px; height: 39px; top: 12%; left: -3%; }
+    .star-3 { width: 51px; height: 51px; bottom: 8%; right: -3%; }
+    .star-4 { width: 21px; height: 21px; top: 42%; right: -1%; }
+    .star-5 { width: 45px; height: 45px; top: 62%; left: -4%; }
+    .star-6 { width: 33px; height: 33px; bottom: 28%; left: -2%; }
+    .star-7 { width: 54px; height: 54px; top: 22%; right: -5%; }
+    .star-8 { width: 24px; height: 24px; bottom: 42%; right: -2%; }
+    .star-9 { width: 42px; height: 42px; bottom: 3%; left: -3%; }
 }

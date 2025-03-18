@@ -317,7 +317,7 @@ h1 {
 .decorative-elements div {
     position: absolute;
     z-index: 2;
-    opacity: 0.9;
+    opacity: 0.8;
 }
 
 .star {
@@ -605,6 +605,7 @@ h1 {
     height: 250px;
     bottom: -50px;
     right: -50px;
+    opacity: 0.30 !important;
 }
 
 @media (max-width: 600px) {

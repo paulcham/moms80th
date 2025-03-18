@@ -1,0 +1,530 @@
+:root {
+    --coral: #FF6B6B;
+    --light-coral: #FFA5A5;
+    --blue: #0066CC;
+    --orange: #FF9933;
+    --bg-color: #FFF5F5;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Special Elite', cursive;
+    background-color: var(--bg-color);
+    line-height: 1.6;
+    color: #333;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem;
+    position: relative;
+    overflow: hidden;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+h1 {
+    font-family: 'Luckiest Guy', cursive;
+    font-size: 3.5rem;
+    line-height: 1.2;
+    margin-bottom: 1.5rem;
+}
+
+.title-mary {
+    color: var(--orange);
+    display: block;
+}
+
+.title-80 {
+    color: var(--blue);
+    display: block;
+    font-size: 4.5rem;
+}
+
+.title-birthday {
+    color: var(--coral);
+    display: block;
+}
+
+.profile-image {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.circular-image {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 8px solid var(--light-coral);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.main-content {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: relative;
+    z-index: 1;
+}
+
+.invitation-text {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.event-details {
+    text-align: center;
+}
+
+.date-time {
+    background-color: var(--coral);
+    color: white;
+    padding: 1rem;
+    border-radius: 25px;
+    margin-bottom: 1.5rem;
+    display: inline-block;
+}
+
+.date {
+    font-family: 'Luckiest Guy', cursive;
+    font-size: 2.2rem;
+}
+
+.time {
+    font-size: 1.8rem;
+}
+
+.location {
+    text-align: center;
+    margin-bottom: 1rem;
+    font-size: 1.3rem;
+    color: var(--blue);
+}
+
+.address {
+    background-color: var(--blue);
+    color: white;
+    padding: 1.5rem 2rem;
+    border-radius: 25px;
+    margin: 2rem auto;
+    max-width: 400px;
+    text-align: center;
+    font-size: 1.2rem;
+}
+
+.additional-info {
+    background-color: var(--orange);
+    color: white;
+    padding: 1.5rem 2rem;
+    border-radius: 25px;
+    margin: 2rem auto;
+    max-width: 500px;
+    font-size: 1.2rem;
+}
+
+.additional-info ul {
+    list-style: none;
+    padding-left: 0;
+    margin: 1rem 0;
+}
+
+.additional-info li {
+    margin: 1rem 0;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.8rem;
+}
+
+.additional-info li::before,
+.additional-info li::after {
+    content: '★';
+    font-size: 0.8em;
+    color: white;
+    opacity: 0.9;
+    position: static;
+    transform: none;
+}
+
+.contact-info {
+    background-color: var(--light-coral);
+    color: white;
+    padding: 1.5rem 2rem;
+    border-radius: 25px;
+    margin: 2rem auto;
+    max-width: 400px;
+    text-align: center;
+    font-size: 1.2rem;
+}
+
+.address h2,
+.additional-info h2,
+.contact-info h2 {
+    font-family: 'Luckiest Guy', cursive;
+    margin-bottom: 1.2rem;
+    font-size: 2.2rem;
+    letter-spacing: 0.05em;
+}
+
+.additional-info p {
+    margin: 1rem 0;
+}
+
+.rsvp-section {
+    background-color: var(--blue);
+    color: white;
+    padding: 1.5rem 2rem;
+    border-radius: 25px;
+    margin: 2rem auto;
+    max-width: 500px;
+    text-align: center;
+}
+
+.rsvp-section h2 {
+    font-family: 'Luckiest Guy', cursive;
+    margin-bottom: 1.2rem;
+    font-size: 2.2rem;
+    letter-spacing: 0.05em;
+}
+
+.rsvp-form {
+    margin-top: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.2rem;
+}
+
+.form-group {
+    width: 100%;
+    max-width: 300px;
+    text-align: left;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-size: 1.1rem;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 0.8rem;
+    border: 2px solid white;
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.9);
+    font-family: 'Special Elite', cursive;
+    font-size: 1.1rem;
+}
+
+.form-group input:focus {
+    outline: none;
+    background: white;
+    box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.3);
+}
+
+.rsvp-button {
+    background-color: var(--orange);
+    color: white;
+    border: none;
+    padding: 1rem 2rem;
+    border-radius: 12px;
+    font-family: 'Luckiest Guy', cursive;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: transform 0.2s, background-color 0.2s;
+    margin-top: 1rem;
+}
+
+.rsvp-button:hover {
+    background-color: var(--coral);
+    transform: scale(1.05);
+}
+
+.rsvp-message {
+    margin-top: 1rem;
+    font-size: 1.1rem;
+    min-height: 1.5em;
+}
+
+@media (max-width: 600px) {
+    .rsvp-section {
+        margin: 1.5rem 1rem;
+        padding: 1.2rem;
+    }
+
+    .form-group input {
+        font-size: 1rem;
+        padding: 0.6rem;
+    }
+
+    .rsvp-button {
+        padding: 0.8rem 1.6rem;
+        font-size: 1.1rem;
+    }
+}
+
+.website-link {
+    background-color: var(--coral);
+    color: white;
+    padding: 1.5rem 2rem;
+    border-radius: 25px;
+    display: inline-block;
+    margin: 1.5rem auto;
+    text-align: center;
+    font-size: 1.2rem;
+}
+
+.website-link a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.decorative-elements div {
+    position: absolute;
+    z-index: 0;
+}
+
+.star {
+    background-color: var(--blue);
+    clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+}
+
+.star-1 {
+    width: 45px;
+    height: 45px;
+    top: 5%;
+    right: 15%;
+    background-color: var(--blue);
+}
+
+.star-2 {
+    width: 65px;
+    height: 65px;
+    top: 20%;
+    left: 5%;
+    background-color: var(--orange);
+    transform: rotate(45deg);
+}
+
+.star-3 {
+    width: 85px;
+    height: 85px;
+    bottom: 15%;
+    right: 15%;
+    background-color: var(--light-coral);
+    transform: rotate(-15deg);
+}
+
+.star-4 {
+    width: 35px;
+    height: 35px;
+    top: 40%;
+    right: 8%;
+    background-color: var(--orange);
+    transform: rotate(20deg);
+}
+
+.star-5 {
+    width: 75px;
+    height: 75px;
+    top: 60%;
+    left: 12%;
+    background-color: var(--blue);
+    transform: rotate(-30deg);
+}
+
+.star-6 {
+    width: 55px;
+    height: 55px;
+    bottom: 25%;
+    left: 20%;
+    background-color: var(--light-coral);
+    transform: rotate(60deg);
+}
+
+.star-7 {
+    width: 90px;
+    height: 90px;
+    top: 15%;
+    right: 25%;
+    background-color: var(--orange);
+    transform: rotate(-5deg);
+}
+
+.star-8 {
+    width: 40px;
+    height: 40px;
+    bottom: 40%;
+    right: 10%;
+    background-color: var(--blue);
+    transform: rotate(75deg);
+}
+
+.star-9 {
+    width: 70px;
+    height: 70px;
+    bottom: 10%;
+    left: 8%;
+    background-color: var(--light-coral);
+    transform: rotate(25deg);
+}
+
+.arrow {
+    border-right: 12px solid var(--coral);
+    border-bottom: 12px solid var(--coral);
+}
+
+.arrow-1 {
+    width: 60px;
+    height: 60px;
+    top: 30%;
+    left: 5%;
+    transform: rotate(45deg);
+}
+
+.arrow-2 {
+    width: 80px;
+    height: 80px;
+    bottom: 20%;
+    right: 8%;
+    transform: rotate(225deg);
+}
+
+.arrow-3 {
+    width: 100px;
+    height: 100px;
+    top: 50%;
+    right: 15%;
+    transform: rotate(135deg);
+}
+
+.arrow-4 {
+    width: 70px;
+    height: 70px;
+    bottom: 35%;
+    left: 12%;
+    transform: rotate(315deg);
+}
+
+.arrow-5 {
+    width: 90px;
+    height: 90px;
+    top: 15%;
+    left: 18%;
+    transform: rotate(180deg);
+}
+
+.arrow-6 {
+    width: 50px;
+    height: 50px;
+    bottom: 25%;
+    right: 20%;
+    transform: rotate(90deg);
+}
+
+.flower {
+    position: relative;
+}
+
+.flower::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: var(--light-coral);
+    border-radius: 50%;
+}
+
+.flower-1 {
+    width: 60px;
+    height: 60px;
+    top: 45%;
+    right: 12%;
+    background-color: var(--light-coral);
+    border-radius: 50%;
+}
+
+.flower-1::before {
+    top: -30px;
+    width: 30px;
+    height: 30px;
+}
+
+.flower-2 {
+    width: 90px;
+    height: 90px;
+    bottom: 30%;
+    left: 15%;
+    background-color: var(--light-coral);
+    border-radius: 50%;
+}
+
+.flower-2::before {
+    top: -45px;
+    width: 45px;
+    height: 45px;
+}
+
+.flower-3 {
+    width: 120px;
+    height: 120px;
+    top: 20%;
+    right: 20%;
+    background-color: var(--light-coral);
+    border-radius: 50%;
+}
+
+.flower-3::before {
+    top: -60px;
+    width: 60px;
+    height: 60px;
+}
+
+@media (max-width: 600px) {
+    .container {
+        padding: 1rem;
+    }
+
+    h1 {
+        font-size: 2.5rem;
+    }
+
+    .title-80 {
+        font-size: 3.5rem;
+    }
+
+    .main-content {
+        padding: 1.5rem;
+    }
+
+    .invitation-text {
+        font-size: 1.1rem;
+    }
+
+    .date {
+        font-size: 1.5rem;
+    }
+
+    .time {
+        font-size: 1.3rem;
+    }
+
+    .decorative-elements div {
+        transform: scale(0.6);
+    }
+}

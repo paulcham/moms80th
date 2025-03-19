@@ -38,7 +38,7 @@ document.addEventListener('DOMContentLoaded', () => {
       
     } catch (error) {
       console.error('Error:', error);
-      messageDiv.textContent = 'Sorry, there was a problem submitting your RSVP. Please try again or call Annie.';
+      messageDiv.textContent = 'Sorry, there was a problem submitting your RSVP. Please try again or call Anne or Paul.';
       messageDiv.style.color = '#FFD7D7';
     } finally {
       submitButton.disabled = false;
